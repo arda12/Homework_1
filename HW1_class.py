@@ -1,16 +1,22 @@
-# Class that reads burl1 data
-# This Class takes the function name 
-#Samira Ardani, 2013
+# Class that reads burl1_2012 data
+# This Class takes the file name as an input. The outputs  are: wind direction in oceanographical convention, horizontal and vertical wind speed, dates and pressure  
+# Samira Ardani, 2013
+
 import numpy as np
 import math 
 from datetime import datetime
 #import matplotlib.pyplot as plt
 
 class HW1_class():
+    '''
+    Input is the file name.
+    Outputs are wind direction in oceanographical convention, horizontal and vertical wind speed, dates and pressure.  
+    
+    '''
+    
     def __init__(self,filename):
         f = open(filename)
-    #results =[]
-     #   wind = []
+         
         wind_dir = []
         wind_speed = []
         pressure = []
@@ -44,9 +50,9 @@ class HW1_class():
                 d = np.nan
             print d
             direc.append(d)
-#print direc        
+        
 
-#    np.isnan(d)
+
         prs =[]
         for p in pressure:
   
@@ -85,8 +91,7 @@ class HW1_class():
         print sp_v
         print sp_h
         
-       # self = 'burl1_2012.dat'
-        
+               
         self.sp_v = sp_v
         self.sp_h = sp_h
         self.prs = prs
